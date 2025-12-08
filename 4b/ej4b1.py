@@ -46,13 +46,16 @@ Exemple:
 def squared_sum_ram(numbers_list):
     # Store the list in RAM
     # Write here your code
-    pass
+    ram_sum = 0
+    for number in numbers_list:
+        ram_sum += number ** 2
+    return ram_sum
 
 
 def squared_sum_heap(numbers_list):
     # Store the list in Heap
     # You should correct and overwrite something in the following line.
-    squared_sum_list = [num**1 for num in numbers_list]
+    squared_sum_list = [num**2 for num in numbers_list]
     heap_sum = sum(squared_sum_list)
     return heap_sum
 
