@@ -48,22 +48,23 @@ Exemple:
 from abc import ABC, abstractmethod
 
 # Write abstract class Vehicles here 
-class Vehicles():
-    def drive(self):
+class Vehicles(ABC):
+    @abstractmethod
+    def drive(self) -> str:
         # Write here your code
         pass
 
 # Corret and overwrite class Car(Vehicles) here 
-class Car():
+class Car(Vehicles):
     def drive(self):
         # Write here your code
-        pass
+        return "Driving a car"
 
 # Corret and overwrite class Bicycle(Vehicles) here 
-class Bicycle():
+class Bicycle(Vehicles):
     def drive(self):
         # Write here your code
-        pass
+        return "Riding a bicycle"
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
