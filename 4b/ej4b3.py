@@ -83,7 +83,19 @@ def create_list(length_list):
     """
 
     # Write here your code
-    pass
+
+    if length_list < 0:
+        raise ValueError("The number must be positive")
+    
+    random_list = []
+
+    for _ in range(length_list):
+        random_list.append(random.randint(0,100))
+    
+    copied_list = copy.deepcopy(random_list)
+
+    return (random_list, copied_list)
+    
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
