@@ -84,20 +84,24 @@ class Shape:
         return self.sides
     
 # Corret and overwrite class Triangle(Shape) here
-class Triangle():
+class Triangle(Shape):
     def __init__(self, sides, base, height):        
-        pass
+        super().__init__(sides)
+        self.base = base
+        self.height = height
 
     def get_area(self):
-        pass
+        return (self.base * self.height) / 2
 
 # Corret and overwrite class Rectangle(Shape) here
 class Rectangle(Shape):
     def __init__(self, sides, length, width):        
-        pass
+        super().__init__(sides)
+        self.length = length
+        self.width = width
 
     def get_area(self):
-        pass
+        return self.length * self.width
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
